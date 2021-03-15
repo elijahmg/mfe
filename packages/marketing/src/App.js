@@ -10,6 +10,7 @@ const generateClassName = createGenerateClassName({
 });
 
 export default ({ history }) => {
+  console.log('t');
   return <div>
     <StylesProvider generateClassName={generateClassName}>
       <Router history={history}>
