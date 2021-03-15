@@ -26,6 +26,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
+      - run: pip3 install awscli
       - name: Syndc build with aws
         run: aws s3 sync dist s3://${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
         env:
